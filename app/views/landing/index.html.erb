@@ -71,29 +71,31 @@ span.psw {
 
     <section class="col-md-4" id="sidecontainer">
 
-      <form action="/action_page.php">
+      <form action="">
         <!-- <div class="imgcontainer">
           <img src="img_avatar2.png" alt="Avatar" class="avatar">
         </div> -->
 
         <div class="container sidecontainerback" >
           <label for="uname"><b>Usuario</b></label>
-          <input type="text" placeholder="" name="uname" required>
+          <input type="text" placeholder="" name="user" required>
 
           <label for="psw"><b>Contraseña</b></label>
           <input type="password" placeholder="" name="psw" required>
 
           <button type="submit" class="btn btn-outline-primary" style="background-color: none !important;">Login</button>
-          <button type="submit" class="btn btn-outline-secondary">SignUp</button>
+          <!-- <button type="submit" class="btn btn-outline-secondary">SignUp</button> -->
           <label class="" id="rememberButton">
             <input type="radio" name="remember" class="radio"> Recuerdame
           </label>
         </div>
-
-
         </div>
       </form>
-      <span class="psw"><a href="#">Olvidaste tu contraseña?</a></span>
+      <span class="psw"><a href="#" style="color:white;">Olvidaste tu contraseña?</a></span>
+
+      <form action="/signup">
+            <button type="submit" class="btn btn-outline-secondary">SignUp</button>
+      </form>
     </section>
 
     <section class="col-md-8" id="rightsidecontainer">
