@@ -4,12 +4,21 @@
 
     <h1>Sign up</h1>
 
-    <%= form_for :user, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+    <!-- <%= form_for :user, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
       <%= f.text_field :first_name %>
       <%= f.text_field :last_name %>
       <%= f.text_field :email %>
       <%= f.password_field :password %>
       <%= f.submit "Create" %>
+    <% end %> -->
+
+    <%= form_for :user, url: {action: "create"} do |f| %>
+      Nombre: <%= f.text_field :first_name %>
+      Apellido: <%= f.text_field :last_name %>
+      Email: <%= f.text_field :email %>
+      Password: <%= f.password_field :password %>
+      Password Confirmation: <%= f.password_field :password_confirmation %>
+      <%= f.submit "Submit" %>
     <% end %>
 
 
