@@ -1,14 +1,19 @@
-<div class="login">
-	<div class="container">
-		<div class="form">
-
-      <h1>Log in</h1>
-      <%= form_for(:session, url: login_path) do |f| %>
-        <%= f.email_field :email, :placeholder => "Email" %> 
-        <%= f.password_field :password, :placeholder => "Password" %>
-        <%= f.submit "Log in", class: "btn-submit" %>
-      <% end %>
-
-    </div>
+<section class="col-md-4" id="sidecontainer">
+	<div class="login">
+		<div class="container sidecontainerback">
+			<div class="form">
+	      <%= form_for(:session, url: login_path) do |f| %>
+					<label for="uname"><b>Usuario</b></label>
+	        <%= f.email_field :email, :placeholder => "" %>
+					<label for="psw"><b>Contraseña</b></label>
+	        <%= f.password_field :password, :placeholder => "" %>
+	        <%= f.submit "Log in", class: "btn-submit btn-outline-primary" %>
+	      <% end %>
+	    </div>
+			<span class="psw"><a href="#" style="color:white;">Olvidaste tu contraseña?</a></span>
+			<form action="/signup">
+				<button type="submit" class="btn btn-outline-secondary">SignUp</button>
+			</form>
+		</div>
 	</div>
-</div>
+</section>

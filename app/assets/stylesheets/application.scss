@@ -10,10 +10,69 @@
    background-color: #7B1FA2 !important;
  }
 
+ input, select, textarea{
+    color: white;
+  }
+
+ input[type=email], input[type=password] {
+     width: 100%;
+     padding: 8px;
+     margin-top: -10px !important;
+     margin: 8px 0;
+     display: inline-block;
+     /* border: 1px solid #ccc; */
+     border: none;
+     border-bottom: 1px solid #ccc !important;
+     box-sizing: border-box;
+ }
+
+ button {
+     background-color: #4CAF50;
+     color: white;
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     cursor: pointer;
+     width: 100%;
+ }
+
+   button:hover {
+       opacity: 0.8;
+   }
+
+   .cancelbtn {
+       width: auto;
+       padding: 10px 18px;
+       background-color: #f44336;
+   }
+
+   .imgcontainer {
+       text-align: center;
+       margin: 24px 0 12px 0;
+   }
+
+   img.avatar {
+       width: 40%;
+       border-radius: 50%;
+   }
+
+   .container {
+       padding: 16px;
+   }
+
+   span.psw {
+       float: right;
+       padding-top: 16px;
+   }
+
  #sidecontainer {
 
     height: 100% !important;
     margin-left: 100px;
+
+    textarea:focus, input:focus{
+        outline: none;
+    }
 
    .sidecontainerback {
      color: white !important;
@@ -32,6 +91,10 @@
      right: -120px;
      bottom: -65px;
      width: 100px !important;
+     height: 40px !important;
+   }
+   .btn-outline-primary:hover {
+     opacity: .8;
    }
 
    .btn-outline-secondary {
@@ -41,8 +104,8 @@
      padding-left:  20px;
      padding-right:  20px;
      position:relative;
-     right: -250px;
-     bottom: -435px;
+     right: -230px;
+     bottom: -15px;
      width: 100px !important;
    }
 
@@ -55,7 +118,7 @@
 
    .psw {
      position: relative !important;
-     margin-top: 360px !important;
+     margin-top: -40px !important;
    }
 
    .checkbox {
@@ -66,6 +129,4 @@
     #rightsidecontainer {
       background-color: white !important;
     }
-
-
  }

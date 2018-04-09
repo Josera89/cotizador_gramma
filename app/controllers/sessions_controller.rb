@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/home'
     else
-      redirect_to '/signup'
+      redirect_to '/error'
     end
   end
 
