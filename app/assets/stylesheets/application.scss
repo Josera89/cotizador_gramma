@@ -14,7 +14,7 @@
  }
 
  input {
-   background-color: #7B1FA2 !important;
+   background-color: #7B1FA2;
  }
 
  input, select, textarea{
@@ -139,6 +139,7 @@
  }
 
  .topnav {
+   color: #E040FB;
    #email {
      display:inline-block;margin-right:10px;
    }
@@ -163,18 +164,19 @@
     overflow: hidden;
     color: #5E5E5E !important;
     border-radius: 15px;
-    height: 490px;
+    height: 500px;
     padding: 20px;
     float:left;
     background-color: #E0E0E0;
   }
 
   .container-rightsub {
+    font-size: 40px;
     overflow: hidden;
     color: #5E5E5E !important;
     border-radius: 15px;
-    height: 490px;
-    padding: 20px;
+    height: 500px;
+    padding: 40px;
     float:right;
     background-color: white;
   }
@@ -201,9 +203,34 @@
 
   .w3-sidebar {
     background: white !important;
-    height: 490px !important;
+    height: 500px !important;
     margin-top: 62px;
     margin-left: 3px !important;
     opacity: .6;
     width: 128px;
-}
+  }
+
+  .dropdown-menu {
+    padding: 12px;
+  }
+
+  .btn-info {
+    border: none;
+    background-color: rgb(175,60,203) !important;
+    color: white;
+    opacity: .4;
+    width: 40%;
+  }
+
+  .btn-cotizar {
+    margin-top: 30px;
+    border: none;
+    background-color: rgb(175,60,203) !important;
+    // color: white;
+    // opacity: .4;
+    // width: 40%;
+  }
+
+  #basic-addon2 {
+    background-color: white !important;
+  }
