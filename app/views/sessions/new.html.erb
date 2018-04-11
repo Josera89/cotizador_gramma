@@ -3,7 +3,7 @@
 		<div class="container sidecontainerback">
 			<div class="form">
 	      <%= form_for(:session, url: login_path) do |f| %>
-					<label for="uname"><b>Usuario</b></label>
+					<label for="uname"><b>Email</b></label>
 	        <%= f.email_field :email, :placeholder => "" %>
 					<label for="psw"><b>Contraseña</b></label>
 	        <%= f.password_field :password, :placeholder => "" %>

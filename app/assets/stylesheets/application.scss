@@ -1,6 +1,13 @@
 /* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables" */
  @import "bootstrap";
 
+ html, body {
+   margin:0;
+   padding:0;
+   height:100%;
+   color: #5E5E5E !important;
+ }
+
  body {
    font-family: Roboto, sans-serif;
    background-color: #7B1FA2;
@@ -130,3 +137,73 @@
       background-color: white !important;
     }
  }
+
+ .topnav {
+   #email {
+     display:inline-block;margin-right:10px;
+   }
+   #logout {
+     display: inline-block !important;
+   }
+ }
+
+
+  .main-container {
+    color: black;
+    background-color: none;
+    border-radius: 15px;
+    height: 490px;
+    margin-top: 50px !important;
+    // padding: 20px;
+    opacity: .85;
+    width: 100%;
+  }
+
+  .container-leftsub {
+    overflow: hidden;
+    color: #5E5E5E !important;
+    border-radius: 15px;
+    height: 490px;
+    padding: 20px;
+    float:left;
+    background-color: #E0E0E0;
+  }
+
+  .container-rightsub {
+    overflow: hidden;
+    color: #5E5E5E !important;
+    border-radius: 15px;
+    height: 490px;
+    padding: 20px;
+    float:right;
+    background-color: white;
+  }
+
+  #sidenav {
+    border-radius: 10px;
+  }
+
+  .w3-new {
+    background: linear-gradient(to right, rgb(188,160,240) , rgb(237,188,234));
+    // background-color: none !important;
+  }
+
+  .w3-purple {
+    background-color: rgb(175,60,203) !important;
+  }
+
+  .w3-hover-purple {
+    background-color: white !important
+  }
+  .w3-hover-purple:active {
+    background-color: yellow !important
+  }
+
+  .w3-sidebar {
+    background: white !important;
+    height: 490px !important;
+    margin-top: 62px;
+    margin-left: 3px !important;
+    opacity: .6;
+    width: 128px;
+}
