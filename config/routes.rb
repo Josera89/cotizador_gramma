@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get '/', to: 'sessions#new'
   get '/home', to: 'home#index'
 
+  get '/logs', to: 'bills#index'
+
   get '/signup', to: 'users#new'
 
   get '/login', to: 'sessions#new'

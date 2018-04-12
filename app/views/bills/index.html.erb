@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="container">
+    <h1>Registros</h1>
+  </div>
+</div>
+
+<div class="bills">
+  <div class="container">
+
+    <!-- Your code here -->
+    <% @bills.each do |bill| %>
+      <div class="bill">
+        <p class="company"><%= bill.company %></p>
+        <p class="specifications"><%= bill.specifications %></p>
+        <p class="email"><%= bill.email %></p>
+        <p class="deadline"><%= bill.deadline %></p>
+        <p class="total"><%= bill.total %></p>
+        <p class="agent"><%= bill.agent %></p>
+      </div>
+    <% end %>
+
+  </div>
+</div>

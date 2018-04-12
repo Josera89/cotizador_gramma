@@ -23,18 +23,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <!-- <i class="fa fa-home w3-xxlarge"></i> -->
     <p>INICIO</p>
   </a>
-  <!-- <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>COTIZAR</p>
-  </a> -->
+  <a href="/logs" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
+    <p>REGISTROS</p>
+  </a>
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
     <!-- <i class="fa fa-eye w3-xxlarge"></i> -->
     <p>AJUSTES</p>
   </a>
-  <!-- <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a> -->
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
@@ -119,15 +114,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
     <div class="container-rightsub col-md-4">
+      <p><%= @client %></p>
       <p>TOTAL: $0.00</p>
     </div>
   </div>
-
-
-
-
-
-
 
 
     <!-- Footer -->
