@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get '/', to: 'sessions#new'
   get '/home', to: 'home#index'
 
-  get '/logs', to: 'bills#index'
+  get '/bills', to: 'bills#index'
+  post 'bills' => 'bills#create'
+  get '/bills/new' => 'bills#new'
 
   get '/signup', to: 'users#new'
 

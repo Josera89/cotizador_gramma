@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="container">
+    <h1>Cotizacíon</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+
+    <!-- Your code here -->
+    <%= form_for(@bill) do |f| %>
+      <div class="field">
+        <p>Agente: </p>
+        <%= f.text_area :agent %>
+        <p>Especificaciones: </p>
+        <%= f.text_area :specifications %>
+        <p>Compañia o Cliente:</p>
+        <%= f.text_area :company %>
+        <p>Email: </p>
+        <%= f.text_area :email %>
+        <p>Fecha de entrega: </p>
+        <%= f.text_area :deadline%>
+        <p>Total: </p>
+        <%= f.text_area :total %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Create" %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
