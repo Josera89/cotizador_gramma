@@ -59,19 +59,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
       <h3>Diseño</h3>
       <div class="design services btn-group">
-        <button type="button" class="btn btn-outline-primary service" value="10000">
+        <button type="button" class="btn btn-outline-primary service" value="10000" id="diseñoLogo">
           <i class="fa fa-pencil" aria-hidden="true"></i>
           <p class="description">Diseño logo</p>
         </button>
-        <button type="button" class="btn btn-outline-primary service" value="5000">
+        <button type="button" class="btn btn-outline-primary service" value="5000" id="identCorp">
           <i class="fa fa-industry" aria-hidden="true"></i>
           <p class="description">Identidad Corp.</p>
         </button>
-        <button type="button" class="btn btn-outline-primary service" value="15000">
+        <button type="button" class="btn btn-outline-primary service" value="15000" id="diseñoWeb">
           <i class="fa fa-desktop" aria-hidden="true"></i>
           <p class="description">Diseño Web</p>
         </button>
-        <button type="button" class="btn btn-outline-primary service" value="2000">
+        <button type="button" class="btn btn-outline-primary service" value="2000" id="materialImp">
           <i class="fa fa-print" aria-hidden="true"></i>
           <p class="description">Material Impresion</p>
         </button>
@@ -79,50 +79,50 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
       <h3>Branding</h3>
       <div class="design services btn-group">
-        <button type="button" class="btn btn-outline-primary service">
+        <!-- <button type="button" class="btn btn-outline-primary service">
           <i class="fa fa-pencil" aria-hidden="true"></i>
           <p class="description">Diseño logo</p>
         </button>
         <button type="button" class="btn btn-outline-primary service">
           <i class="fa fa-pencil" aria-hidden="true"></i>
           <p class="description">Diseño logo</p>
-        </button>
+        </button> -->
       </div>
 
       <h3>Social Media Management</h3>
       <div class="design services btn-group">
-        <button type="button" class="btn btn-outline-primary service">
+        <!-- <button type="button" class="btn btn-outline-primary service">
           <i class="fa fa-pencil" aria-hidden="true"></i>
           <p class="description">Diseño logo</p>
         </button>
         <button type="button" class="btn btn-outline-primary service">
           <i class="fa fa-pencil" aria-hidden="true"></i>
           <p class="description">Diseño logo</p>
-        </button>
+        </button> -->
       </div>
 
       <h3>Marketing & Publicidad</h3>
       <div class="design services btn-group">
-        <button type="button" class="btn btn-outline-primary service">
+        <!-- <button type="button" class="btn btn-outline-primary service">
           <i class="fa fa-pencil" aria-hidden="true"></i>
           <p class="description">Diseño logo</p>
         </button>
         <button type="button" class="btn btn-outline-primary service">
           <i class="fa fa-pencil" aria-hidden="true"></i>
           <p class="description">Diseño logo</p>
-        </button>
+        </button> -->
       </div>
 
       <h3>Eventos & Street Marketing</h3>
       <div class="design services btn-group">
-        <button type="button" class="btn btn-outline-primary service">
+        <!-- <button type="button" class="btn btn-outline-primary service">
           <i class="fa fa-pencil" aria-hidden="true"></i>
           <p class="description">Diseño logo</p>
         </button>
         <button type="button" class="btn btn-outline-primary service">
           <i class="fa fa-pencil" aria-hidden="true"></i>
           <p class="description">Diseño logo</p>
-        </button>
+        </button> -->
       </div>
 
 
@@ -134,28 +134,40 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <div class="container-rightsub col-md-4">
       <p><%= @client %></p>
-      <p >TOTAL:</p>
-      <h1>$ <p id="total" val="0">0.000</p></h1>
+      <ol id="concepto">
+      </ol>
+      <p >TOTAL: $<h1> <p id="total" val="0">0.000</p></h1></p>
+
+
     </div>
   </div>
 
   <script>
-    var totalArray = []
+    var totalArray = [0]
     var total = 0;
 
+
     $('.service').on('click', function() {
+      var nombre = $(this).attr('id')
+
       $(this).toggleClass('active');
       if ($(this).hasClass('active')) {
-
         totalArray.push($(this).val());
         var total = eval(totalArray.join("+"))
         // console.log(totalArray);
+        var texto = $(this).children('p').text()
+        $( "#concepto" ).append( '<li>' + texto + '</li>' );
+
+        $( "#concepto" ).children().last().attr('id', nombre );
       } else {
-        totalArray.splice(-1,1)
+        // totalArray.splice(-1,1)
+        totalArray.push('-' + $(this).val());
         var total = eval(totalArray.join("+"))
+        $("#concepto").find('#' + nombre).remove();
       }
       var text = $('#total').text();
       $('#total').text(text.replace(text, total));
+
       // console.log(total);
     });
 
