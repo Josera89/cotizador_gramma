@@ -1,5 +1,9 @@
+// @import "font-awesome-sprockets";
+@import "font-awesome";
+
 /* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables" */
- @import "bootstrap";
+// @import "bootstrap-sprockets";
+@import "bootstrap";
 
  html, body {
    margin:0;
@@ -12,6 +16,7 @@
    font-family: Roboto, sans-serif;
    background-color: #7B1FA2;
  }
+
 
  input {
    background-color: #7B1FA2;
@@ -154,7 +159,7 @@
     background-color: none;
     border-radius: 15px;
     height: 490px;
-    margin-top: 50px !important;
+    margin-top: 20px !important;
     // padding: 20px;
     opacity: .85;
     width: 100%;
@@ -164,7 +169,7 @@
     overflow: hidden;
     color: #5E5E5E !important;
     border-radius: 15px;
-    height: 500px;
+    height: 640px;
     padding: 20px;
     float:left;
     background-color: #E0E0E0;
@@ -175,7 +180,7 @@
     overflow: hidden;
     color: #5E5E5E !important;
     border-radius: 15px;
-    height: 500px;
+    height: 640px;
     padding: 40px;
     float:right;
     background-color: white;
@@ -183,6 +188,7 @@
 
   #sidenav {
     border-radius: 10px;
+    margin-top: 32px;
   }
 
   .w3-new {
@@ -203,7 +209,7 @@
 
   .w3-sidebar {
     background: white !important;
-    height: 500px !important;
+    height: 640px !important;
     margin-top: 62px;
     margin-left: 3px !important;
     opacity: .6;
@@ -233,6 +239,19 @@
 
   #basic-addon2 {
     background-color: white !important;
+  }
+
+  i {
+    font-size: 30px !important;
+  }
+
+  .services {
+    width: 200px;
+    height: 65px;
+  }
+
+  .description {
+    font-size: 10px;
   }
 
   footer {

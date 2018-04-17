@@ -42,6 +42,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.3.7'
 
+
+#fontawesome
+gem "font-awesome-rails"
+gem 'font-awesome-sass'
+
 #jquery
 gem 'jquery-rails'
 
