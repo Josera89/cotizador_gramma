@@ -144,6 +144,7 @@
  }
 
  .topnav {
+   margin-right: -70px;
    color: #E040FB;
    #email {
      display:inline-block;margin-right:10px;
@@ -169,10 +170,12 @@
     overflow: hidden;
     color: #5E5E5E !important;
     border-radius: 15px;
-    height: 640px;
-    padding: 20px;
+    height: 650px;
+    padding: 40px !important;
+    padding-top: 10px !important;
     float:left;
-    background-color: #E0E0E0;
+    // background-color: #E0E0E0;
+    background-color: white;
   }
 
   .container-rightsub {
@@ -180,10 +183,11 @@
     overflow: hidden;
     color: #5E5E5E !important;
     border-radius: 15px;
-    height: 640px;
+    height: 650px;
     padding: 40px;
     float:right;
-    background-color: white;
+    background-color: #E0E0E0;
+    // background-color: white;
   }
 
   #sidenav {
@@ -209,7 +213,7 @@
 
   .w3-sidebar {
     background: white !important;
-    height: 640px !important;
+    height: 650px !important;
     margin-top: 62px;
     margin-left: 3px !important;
     opacity: .6;
@@ -247,7 +251,7 @@
 
   .services {
     width: 200px;
-    height: 65px;
+    height: 75px;
   }
 
   .description {
@@ -260,7 +264,7 @@
 
   #total {
     margin-top: -65px;
-    margin-left: 185px;
+    margin-left: 175px;
   }
 
   footer {

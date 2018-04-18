@@ -4,8 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
@@ -22,14 +22,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="sidenav">
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
-    <!-- <i class="fa fa-home w3-xxlarge"></i> -->
     <p>INICIO</p>
   </a>
   <a href="/bills" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
     <p>REGISTROS</p>
   </a>
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
-    <!-- <i class="fa fa-eye w3-xxlarge"></i> -->
     <p>AJUSTES</p>
   </a>
 </nav>
@@ -57,7 +55,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="main-container">
     <div class="container-leftsub col-md-8">
 
-      <h3>Diseño</h3>
+      <h3>Diseño Grafico</h3>
       <div class="design services btn-group">
         <button type="button" class="btn btn-outline-primary service" value="10000" id="diseñoLogo">
           <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -65,19 +63,40 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         </button>
         <button type="button" class="btn btn-outline-primary service" value="5000" id="identCorp">
           <i class="fa fa-industry" aria-hidden="true"></i>
-          <p class="description">Identidad Corp.</p>
-        </button>
-        <button type="button" class="btn btn-outline-primary service" value="15000" id="diseñoWeb">
-          <i class="fa fa-desktop" aria-hidden="true"></i>
-          <p class="description">Diseño Web</p>
+          <p class="description">Identidad <br> Corporativa</p>
         </button>
         <button type="button" class="btn btn-outline-primary service" value="2000" id="materialImp">
           <i class="fa fa-print" aria-hidden="true"></i>
-          <p class="description">Material Impresion</p>
+          <p class="description">Material de <br> Impresion</p>
         </button>
         <button type="button" class="btn btn-outline-primary service" value="2000" id="editorial">
           <i class="fa fa-eraser" aria-hidden="true"></i>
           <p class="description">Editorial</p>
+        </button>
+      </div>
+      <br>
+
+      <h3>Web</h3>
+      <div class="design services btn-group">
+        <button type="button" class="btn btn-outline-primary service" value="5000" id="diseñoWeb">
+          <i class="fa fa-object-group" aria-hidden="true"></i>
+          <p class="description">Diseño Web</p>
+        </button>
+        <button type="button" class="btn btn-outline-primary service" value="10000" id="landingPage">
+          <i class="fa fa-desktop" aria-hidden="true"></i>
+          <p class="description">Landing <br> Page</p>
+        </button>
+        <button type="button" class="btn btn-outline-primary service" value="2000" id="galleria">
+          <i class="fa fa-image" aria-hidden="true"></i>
+          <p class="description">Galleria de <br> Imagenes</p>
+        </button>
+        <button type="button" class="btn btn-outline-primary service" value="15000" id="ecommerce">
+          <i class="fa fa-credit-card" aria-hidden="true"></i>
+          <p class="description">Ecommerce</p>
+        </button>
+        <button type="button" class="btn btn-outline-primary service" value="15000" id="tickets">
+          <i class="fa fa-ticket" aria-hidden="true"></i>
+          <p class="description">Tickets</p>
         </button>
       </div>
       <br>
@@ -90,7 +109,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         </button>
         <button type="button" class="btn btn-outline-primary service" value="7000" id="arquitectura">
           <i class="fa fa-map-signs" aria-hidden="true"></i>
-          <p class="description">Arquitectura de Marca</p>
+          <p class="description">Arquitectura de  <br> Marca</p>
         </button>
         <button type="button" class="btn btn-outline-primary service" value="5000" id="identidad">
           <i class="fa fa-address-card" aria-hidden="true"></i>
@@ -120,24 +139,34 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <div class="design services btn-group">
         <button type="button" class="btn btn-outline-primary service" value="3000" id="concept">
           <i class="fa fa-cloud" aria-hidden="true"></i>
-          <p class="description">Conceptualizacion Creativa</p>
+          <p class="description">Conceptualizacion <br> Creativa</p>
+        </button>
+        <button type="button" class="btn btn-outline-primary service" value="3000" id="materialFoto">
+          <i class="fa fa-camera" aria-hidden="true"></i>
+          <p class="description">Material Fotografico <br> 15 fotos</p>
+        </button>
+        <button type="button" class="btn btn-outline-primary service" value="3000" id="concept">
+          <i class="fa fa-tv" aria-hidden="true"></i>
+          <p class="description">Material audiovisual <br> 3 videos</p>
         </button>
       </div>
     </div>
 
 
     <div class="container-rightsub col-md-4">
-      <p><%= @client %></p>
+      <h3>Descripción</h3>
+      <hr>
       <ol id="concepto">
       </ol>
-      <p >TOTAL: $<h1> <p id="total" val="0">0.000</p></h1></p>
+      <p>TOTAL:  $<h1> <p id="total" value="0">0.000</p></h1></p>
+      <!-- <p>IVA:  $<h1> <p id="iva" value=".15">0</p></h1></p> -->
       <!-- <%= link_to 'Cotizar >', "bills/new" %> -->
     </div>
   </div>
 
   <script>
     var totalArray = [0]
-    var total = 0;
+    var total = 0.00;
 
 
     $('.service').on('click', function() {
@@ -147,25 +176,28 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       if ($(this).hasClass('active')) {
         totalArray.push($(this).val());
         var total = eval(totalArray.join("+"))
-        // console.log(totalArray);
         var texto = $(this).children('p').text()
         $( "#concepto" ).append( '<li>' + texto + '</li>' );
-
         $( "#concepto" ).children().last().attr('id', nombre );
+
+        // var iva = $('#iva').attr("value")
+        // console.log("iva ", iva)
+        // var ivaText = $('#iva').text();
+        // console.log("ivaText ", ivaText)
+        // console.log("total ", total)
+        // var ivaTotal = (Number(total) * Number(iva))
+        // console.log("ivanTotal ", ivaTotal)
+        // $("#iva").text(text.replace(ivaText, ivaTotal));
+
       } else {
-        // totalArray.splice(-1,1)
         totalArray.push('-' + $(this).val());
         var total = eval(totalArray.join("+"))
         $("#concepto").find('#' + nombre).remove();
       }
       var text = $('#total').text();
       $('#total').text(text.replace(text, total));
-
-      // console.log(total);
     });
   </script>
-
-
 
 <!-- END PAGE CONTENT -->
 </div>
