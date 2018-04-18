@@ -8,6 +8,8 @@ class CreateBills < ActiveRecord::Migration[5.1]
       t.datetime :deadline
       t.string :agent
 
+      t.references :user
+
       t.timestamps
     end
   end
