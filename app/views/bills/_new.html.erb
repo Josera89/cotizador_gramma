@@ -26,7 +26,7 @@
         <%= f.text_area :deadline%>
         <br>
         <h3>TOTAL: </h3>
-        <%= f.text_area :total %>
+        <%= f.text_area :total, :id => 'totalForm' %>
       </div>
       <div class="actions">
         <br>
@@ -35,4 +35,13 @@
     <% end %>
 
   </div>
+
+  <script>
+
+    $(document).ready(function(){
+        $('#totalForm').prop('value', "420");
+    });
+
+  </script>
+
 </div>
