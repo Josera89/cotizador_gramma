@@ -26,6 +26,15 @@
     color: white;
   }
 
+  textarea {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .field textarea {
+    color: black !important;
+  }
+
  input[type=email], input[type=password] {
      width: 100%;
      padding: 8px;
@@ -277,6 +286,52 @@
     margin-top: -65px;
     margin-left: 175px;
   }
+
+
+  .row {
+    width: 1500px;
+  }
+
+
+  .field {
+    textarea {
+      width: 100%
+    }
+  }
+
+  .modal-dialog {
+    margin-left: 200px !important;
+  }
+
+  .modal-content {
+    width: 1000px !important;
+    padding: 30px;
+  }
+
+  .close {
+    // padding: 10px;
+    margin-right: 40px;
+    width: 60px;
+    float: right;
+  }
+
+  .bill {
+    // height: 100px !important;
+    width: 300px !important;
+    margin-right: 7px;
+    background-color: white !important;
+    border-radius: 20px;
+    box-shadow: 5px 10px rgba(100,100,100,.22);
+    position: inherit;
+    padding: 25px;
+    display: inline !important;
+  }
+
+
+  #cotizar {
+    width: 100%;
+  }
+
 
   footer {
     color: white !important;

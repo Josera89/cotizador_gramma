@@ -1,0 +1,38 @@
+<div class="header">
+  <!-- <div class="container">
+    <h1>Cotizacíon</h1>
+  </div> -->
+</div>
+
+<div class="create">
+  <div class="container">
+
+    <!-- Your code here -->
+    <%= form_for(@bills) do |f| %>
+      <div class="field">
+        <h3>AGENTE: </h3>
+        <%= f.text_area :agent %>
+        <br>
+        <h3>ESPECIFICACIONES: </h3>
+        <%= f.text_area :specifications %>
+        <br>
+        <h3>COMPAÑIA O CLIENTE:</h3>
+        <%= f.text_area :company %>
+        <br>
+        <h3>EMAIL: </h3>
+        <%= f.text_area :email %>
+        <br>
+        <h3>FECHA DE ENTREGA: </h3>
+        <%= f.text_area :deadline%>
+        <br>
+        <h3>TOTAL: </h3>
+        <%= f.text_area :total %>
+      </div>
+      <div class="actions">
+        <br>
+        <%= f.submit "Create", :class => 'btn btn-success', :id => 'cotizar' %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
