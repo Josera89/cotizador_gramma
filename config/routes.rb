@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   get '/bills', to: 'bills#index'
   post 'bills' => 'bills#create'
+  # delete 'bills' => 'bills#destroy'
   get '/bills/new' => 'bills#new'
+  resources :bills
 
   get '/signup', to: 'users#new'
 

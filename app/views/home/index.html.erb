@@ -163,7 +163,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <!-- <%= link_to 'Cotizar >', "bills/new" %> -->
 
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Cotizar</button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="cotizarModal">Cotizar</button>
 
     </div>
   </div>
@@ -206,12 +206,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         $( "#concepto" ).children().last().attr('id', nombre );
 
         // var iva = $('#iva').attr("value")
-        // console.log("iva ", iva)
+        // console.log("iva ", typeof iva)
         // var ivaText = $('#iva').text();
-        // console.log("ivaText ", ivaText)
-        // console.log("total ", total)
-        // var ivaTotal = (Number(total) * Number(iva))
-        // console.log("ivanTotal ", ivaTotal)
+        // console.log("ivaText ", typeof ivaText)
+        // console.log("total ", typeof total)
+        // var ivaTotal = String(((Number(total) * Number(iva)) + Number(total)))
+        // console.log("ivaTotal ", typeof ivaTotal)
         // $("#iva").text(text.replace(ivaText, ivaTotal));
 
       } else {

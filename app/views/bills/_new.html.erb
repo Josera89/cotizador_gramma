@@ -10,17 +10,17 @@
     <!-- Your code here -->
     <%= form_for(@bills) do |f| %>
       <div class="field">
-        <h3>AGENTE: </h3>
-        <%= f.text_area :agent %>
-        <br>
-        <h3>ESPECIFICACIONES: </h3>
-        <%= f.text_area :specifications %>
-        <br>
         <h3>COMPAÑIA O CLIENTE:</h3>
         <%= f.text_area :company %>
         <br>
-        <h3>EMAIL: </h3>
+        <h3>EMAIL DE CLIENTE </h3>
         <%= f.text_area :email %>
+        <br>
+        <h3>AGENTE: </h3>
+        <%= f.text_area :agent, :id => 'agenteForm' %>
+        <br>
+        <h3>ESPECIFICACIONES: </h3>
+        <%= f.text_area :specifications, :id => 'especificacionesForm' %>
         <br>
         <h3>FECHA DE ENTREGA: </h3>
         <%= f.text_area :deadline%>
@@ -38,8 +38,23 @@
 
   <script>
 
-    $(document).ready(function(){
-        $('#totalForm').prop('value', "420");
+    $('#cotizarModal').click(function(){
+
+
+        var autoAgent = $('#email').text()
+        $('#agenteForm').prop('value', autoAgent);
+
+        var autoTotal = $('#total').text();
+        $('#totalForm').prop('value', autoTotal);
+
+        var totalEsp = ""
+        var autoEsp = $('#concepto').children();
+        $.each( autoEsp, function( key, value ) {
+          var chomp =$(value).prop('innerHTML');
+           totalEsp += chomp + ", ";
+        });
+        $('#especificacionesForm').prop('value', totalEsp);
+
     });
 
   </script>

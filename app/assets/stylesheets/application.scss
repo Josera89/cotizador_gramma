@@ -317,7 +317,7 @@
 
   .bill {
     // height: 100px !important;
-    width: 300px !important;
+    width: 400px !important;
     margin-right: 7px;
     margin-bottom: 10px;
     background-color: white !important;
@@ -328,9 +328,12 @@
     display: inline !important;
   }
 
-
   #cotizar {
     width: 100%;
+  }
+
+  #borrar {
+    float: right;
   }
 
 

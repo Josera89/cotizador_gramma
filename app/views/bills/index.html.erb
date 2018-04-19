@@ -54,11 +54,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
       <!-- Your code here -->
       <% @bills.each do |bill| %>
-        <div class="col-md-2 bill">
+        <div class="col-md-3 bill">
           <div class="">
 
             <!-- <h4>Cliente</h4> -->
             <h3 class="company"><%= bill.company %></h3>
+            <p>fecha:</p>
+            <h4 class="agent"><%= bill.created_at %></h4>
             <p>Agente:</p>
             <h4 class="agent"><%= bill.agent %></h4>
             <p>Especificaciones:</p>
@@ -71,10 +73,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <strong><h4>Total: $ <%= bill.total %></h4></strong>
 
             <!-- <h4 class="total">$ <%= bill.total %></h4> -->
+            <%= link_to "Borrar", bill, :method => :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-danger", :id => "borrar" %>
           </div>
         </div>
       <% end %>
-
     </div>
 
 
