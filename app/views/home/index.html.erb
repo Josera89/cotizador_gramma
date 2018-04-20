@@ -191,34 +191,36 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     var totalArray = [0]
     var total = 0.00;
 
+    var ivaTotalArray = 0
+    var iva = $('#iva').attr("value");
+    var ivaText = $('#iva').text();
 
     $('.service').on('click', function() {
       var nombre = $(this).attr('id')
 
       $(this).toggleClass('active');
       if ($(this).hasClass('active')) {
+
         totalArray.push($(this).val());
-        var total = eval(totalArray.join("+"))
-        var texto = $(this).children('p').text()
+        var total = eval(totalArray.join("+"));
+
+        ivaTotalArray = ((total*.16)+total);
+        console.log("+ ", ivaTotalArray);
+        var texto = $(this).children('p').text();
         $( "#concepto" ).append( '<li>' + texto + '</li>' );
         $( "#concepto" ).children().last().attr('id', nombre );
 
       } else {
         totalArray.push('-' + $(this).val());
-        var total = eval(totalArray.join("+"))
+        var total = eval(totalArray.join("+"));
         $("#concepto").find('#' + nombre).remove();
+        ivaTotalArray = ((total*.16)+total);
+        console.log("- ", ivaTotalArray)
       }
       var text = $('#total').text();
       $('#total').text(text.replace(text, total));
 
-      var iva = $('#iva').attr("value");
-      console.log("iva ", typeof iva);
-      var ivaText = $('#iva').text();
-      console.log("ivaText ", typeof ivaText);
-      console.log("total ", typeof total)
-      var ivaTotal = String(((Number(total) * Number(iva)) + Number(total)));
-      console.log("ivaTotal ", typeof ivaTotal);
-      $("#iva").text(text.replace(ivaText, ivaTotal));
+      $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
     });
   </script>
 
