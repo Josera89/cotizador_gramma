@@ -19,14 +19,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="sidenav">
   <a href="/home" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
-    <!-- <i class="fa fa-home w3-xxlarge"></i> -->
     <p>INICIO</p>
   </a>
   <a href="/bills" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
     <p>REGISTROS</p>
   </a>
+  <a href="/home" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
+    <p>GRÁFICAS</p>
+  </a>
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-purple">
-    <!-- <i class="fa fa-eye w3-xxlarge"></i> -->
     <p>AJUSTES</p>
   </a>
 </nav>
@@ -35,15 +36,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">INICIO</a>
-    <!-- <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">COTIZAR</a> -->
+    <a href="/home" class="w3-bar-item w3-button" style="width:25% !important">GRÁFICAS</a>
     <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">AJUSTES</a>
-    <!-- <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a> -->
   </div>
 </div>
 
 <div class="header">
   <div class="container">
-    <h1>Registros</h1>
+    <h1 class="registros">REGISTROS</h1>
   </div>
 </div>
 
@@ -72,8 +72,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <hr>
             <h5>Total: $ <%= bill.total %></h5>
             <strong><h3>Total + IVA: $ <%= bill.totalIva %></h3></strong>
-
-            <!-- <h4 class="total">$ <%= bill.total %></h4> -->
             <%= link_to "Borrar", bill, :method => :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-danger", :id => "borrar" %>
           </div>
         </div>

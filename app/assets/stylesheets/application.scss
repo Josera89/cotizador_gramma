@@ -263,6 +263,7 @@
 
   #cotizarModal {
     width: 100%;
+    box-shadow: 8px 8px rgba(110,110,110,.75);
   }
 
   #basic-addon2 {
@@ -312,9 +313,26 @@
   }
 
   .modal-content {
+    margin-top: -10px;
+    height: 690px !important;
     width: 900px !important;
     padding: 25px;
     border-radius: 20px;
+  }
+
+  .modal-header {
+    // margin-top: 0px !important;
+    h1, button {
+      margin-top: -25px !important;
+    }
+    button {
+      margin-top: -40px !important;
+      margin-left: -10px !important;
+    }
+  }
+
+  .field {
+    margin-top: -20px !important;
   }
 
   .close {
@@ -322,6 +340,10 @@
     margin-right: 40px;
     width: 60px;
     float: right;
+  }
+
+  .registros {
+    color: white;
   }
 
   .bill {
@@ -350,10 +372,14 @@
 
   #cotizar {
     width: 100%;
+    height: 40px !important;
     border-radius: 10px !important;
   }
 
   #borrar {
+    position:relative;
+    margin-left: 270px;
+    margin-top: -15px;
     float: right;
   }
 
