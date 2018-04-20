@@ -61,17 +61,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <h3 class="company"><%= bill.company %></h3>
             <p>fecha:</p>
             <h4 class="agent"><%= bill.created_at %></h4>
-            <p>Agente:</p>
+            <p>Agente Gramma:</p>
             <h4 class="agent"><%= bill.agent %></h4>
             <p>Especificaciones:</p>
             <h4 class="specifications"><%= bill.specifications %></h4>
             <p>Email:</p>
             <h4 class="email"><%= bill.email %></h4>
-            <p>Entrega:</p>
+            <p>Fecha de Entrega:</p>
             <h4 class="deadline"><%= bill.deadline %></h4>
             <hr>
-            <h5>Total: $ <%= bill.total %></h5>
-            <strong><h3>Total + IVA: $ <%= bill.totalIva %></h3></strong>
+            <h5>Total: $  <%= bill.total %></h5>
+            <strong><h3>Total+IVA: $  <%= bill.totalIva %></h3></strong>
             <%= link_to "Borrar", bill, :method => :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-danger", :id => "borrar" %>
           </div>
         </div>

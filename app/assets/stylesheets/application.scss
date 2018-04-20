@@ -357,6 +357,9 @@
     position: inherit;
     padding: 25px;
     display: inline !important;
+    p {
+      margin-bottom: -10px;
+    }
   }
 
   .hidden {
@@ -379,7 +382,7 @@
   #borrar {
     position:relative;
     margin-left: 270px;
-    margin-top: -15px;
+    margin-top: 0px;
     float: right;
   }
 
