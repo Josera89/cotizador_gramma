@@ -158,7 +158,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <hr>
       <ol id="concepto">
       </ol>
-      <br>
+      <!-- <br> -->
       <p class="totalBill">TOTAL:  $<h3> <p id="total" value="0">0.000</p></h3></p>
       <p class="totalBill">TOTAL + IVA:  $<h1> <p id="iva" value=".16">0.000</p></h1></p>
 
@@ -190,22 +190,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <script>
     var totalArray = [0]
     var total = 0.00;
-
     var ivaTotalArray = 0
+    var text = $('#total').text();
     var iva = $('#iva').attr("value");
     var ivaText = $('#iva').text();
 
     $('.service').on('click', function() {
       var nombre = $(this).attr('id')
-
       $(this).toggleClass('active');
       if ($(this).hasClass('active')) {
-
         totalArray.push($(this).val());
         var total = eval(totalArray.join("+"));
-
         ivaTotalArray = ((total*.16)+total);
-        console.log("+ ", ivaTotalArray);
+        // console.log("+ ", ivaTotalArray);
         var texto = $(this).children('p').text();
         $( "#concepto" ).append( '<li>' + texto + '</li>' );
         $( "#concepto" ).children().last().attr('id', nombre );
@@ -215,9 +212,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         var total = eval(totalArray.join("+"));
         $("#concepto").find('#' + nombre).remove();
         ivaTotalArray = ((total*.16)+total);
-        console.log("- ", ivaTotalArray)
+        // console.log("- ", ivaTotalArray)
       }
-      var text = $('#total').text();
+
       $('#total').text(text.replace(text, total));
 
       $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));

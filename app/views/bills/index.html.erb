@@ -70,7 +70,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <p>Entrega:</p>
             <h4 class="deadline"><%= bill.deadline %></h4>
             <hr>
-            <strong><h4>Total: $ <%= bill.total %></h4></strong>
+            <h5>Total: $ <%= bill.total %></h5>
+            <strong><h3>Total + IVA: $ <%= bill.totalIva %></h3></strong>
 
             <!-- <h4 class="total">$ <%= bill.total %></h4> -->
             <%= link_to "Borrar", bill, :method => :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-danger", :id => "borrar" %>
