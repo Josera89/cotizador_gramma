@@ -27,6 +27,8 @@
         <br>
         <h3>TOTAL: </h3>
         <%= f.text_area :total, :id => 'totalForm' %>
+        <!-- <h3>TOTAL + IVA:</h3>
+        <p id="iva"></p> -->
       </div>
       <div class="actions">
         <br>
@@ -45,7 +47,14 @@
         $('#agenteForm').prop('value', autoAgent);
 
         var autoTotal = $('#total').text();
+        console.log(typeof autoTotal)
         $('#totalForm').prop('value', autoTotal);
+
+        // var iva = $('#iva').text();
+        // var ivaTotal = ((Number(autoTotal)*(.15)) + (Number(autoTotal)));
+        // $('#iva').text(text.replace(iva, ivatotal));
+        // console.log(ivaTotal);
+        // $('#iva').prop('text', ivaTotal);
 
         var totalEsp = ""
         var autoEsp = $('#concepto').children();
