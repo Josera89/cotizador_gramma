@@ -261,6 +261,10 @@
     // width: 40%;
   }
 
+  #cotizarModal {
+    width: 100%;
+  }
+
   #basic-addon2 {
     background-color: white !important;
   }
@@ -288,7 +292,7 @@
   }
 
   #iva {
-    margin-top: -53px;
+    margin-top: -55px;
     margin-left: 135px;
   }
 
@@ -308,8 +312,9 @@
   }
 
   .modal-content {
-    width: 1000px !important;
-    padding: 30px;
+    width: 900px !important;
+    padding: 25px;
+    border-radius: 20px;
   }
 
   .close {
@@ -325,11 +330,17 @@
     margin-right: 7px;
     margin-bottom: 10px;
     background-color: white !important;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 5px 10px rgba(100,100,100,.22);
     position: inherit;
     padding: 25px;
     display: inline !important;
+  }
+
+  .hidden {
+    // display: hidden !important;
+    // visibility: hidden !important;
+    display: none;
   }
 
   .totalBill {
@@ -339,6 +350,7 @@
 
   #cotizar {
     width: 100%;
+    border-radius: 10px !important;
   }
 
   #borrar {

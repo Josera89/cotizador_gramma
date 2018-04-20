@@ -15,20 +15,17 @@
         <br>
         <h3>EMAIL DE CLIENTE </h3>
         <%= f.text_area :email %>
-        <br>
-        <h3>AGENTE: </h3>
-        <%= f.text_area :agent, :id => 'agenteForm' %>
-        <br>
-        <h3>ESPECIFICACIONES: </h3>
-        <%= f.text_area :specifications, :id => 'especificacionesForm' %>
-        <br>
         <h3>FECHA DE ENTREGA: </h3>
         <%= f.text_area :deadline%>
-        <br>
-        <h3>TOTAL: </h3>
-        <%= f.text_area :total, :id => 'totalForm' %>
-        <h3>TOTAL + IVA: </h3>
-        <%= f.text_area :totalIva, :id => 'totalIvaForm' %>
+        <!-- <h3>AGENTE: </h3> -->
+        <%= f.text_area :agent, :id => 'agenteForm', :class => 'hidden'%>
+        <h3>ESPECIFICACIONES: </h3>
+        <p>*otros</p>
+        <%= f.text_area :specifications, :id => 'especificacionesForm' %>
+        <!-- <h3>TOTAL: </h3> -->
+        <%= f.text_area :total, :id => 'totalForm', :class => 'hidden' %>
+        <!-- <h3>TOTAL + IVA: </h3> -->
+        <%= f.text_area :totalIva, :id => 'totalIvaForm', :class => 'hidden' %>
 
       </div>
       <div class="actions">
