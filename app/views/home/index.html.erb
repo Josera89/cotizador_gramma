@@ -292,8 +292,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     var test = "";
     var preTotal = 0;
     $('.serviceNumeric').on('click', function() {
-      console.log(total);
-      console.log(preTotal);
+      // console.log(total);
+      // console.log(preTotal);
       var newTotal = 0;
       var nombre = $(this).attr('id')
       var value = $(this).val();
@@ -309,7 +309,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       slider.oninput = function() {
         output.innerHTML = this.value;
         cost = ((Number(output.innerHTML)*value));
-        // console.log("total", total);
         newTotal = (Number(cost) + Number(total) + preTotal);
         if (output.innerHTML >= oldRange ) {
           ivaTotalArray = ((newTotal*.16) + newTotal);
@@ -325,25 +324,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           $('#total').text(text.replace(text, (total + cost)));
           $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           if (output.innerHTML == 0) {
-            console.log("preTotal: ", preTotal);
-            console.log("total: ", total);
             $('#closeModal').click();
             $('#total').text(text.replace(text, (preTotal + total)));
-            console.log("preTotal: ", preTotal);
-            console.log("total: ", total);
-
+            ivaTotalArray = (((preTotal + total)*.16)+(preTotal + total));
+            $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           }
         }
       }
       $('#acceptModal').on('click', function() {
         preTotal += cost;
-        // console.log(preTotal);
       });
     });
 
 
     $('.serviceVisual').on('click', function() {
-      console.log(preTotal);
+      // console.log(preTotal);
       var newTotal = 0;
       var nombre = $(this).attr('id')
       var value = $(this).val();
@@ -359,7 +354,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       slider.oninput = function() {
         output.innerHTML = this.value;
         cost = ((Number(output.innerHTML)*value));
-        // console.log("total", total);
         newTotal = (Number(cost) + Number(total) + preTotal);
         if (output.innerHTML >= oldRange ) {
           ivaTotalArray = ((newTotal*.16) + newTotal);
@@ -375,19 +369,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           oldRange = output.innerHTML;
           if (output.innerHTML == 0) {
-            console.log("preTotal: ", preTotal);
-            console.log("total: ", total);
             $('#closeModal').click();
             $('#total').text(text.replace(text, (preTotal + total)));
-            console.log("preTotal: ", preTotal);
-            console.log("total: ", total);
-
+            ivaTotalArray = (((preTotal + total)*.16)+(preTotal + total));
+            $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           }
         }
       }
       $('#acceptModal').on('click', function() {
         preTotal += cost;
-        // console.log(preTotal);
       });
     });
 
