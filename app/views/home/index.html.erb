@@ -305,15 +305,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
     });
 
-
-
-
-
-
     var test = "";
     var preTotal = 0;
-    // var testTotal = total;
-
     $('.serviceNumeric').on('click', function() {
       console.log(preTotal);
       var newTotal = 0;
@@ -328,13 +321,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       test.addClass('active');
       slider.value = 0;
       output.innerHTML = slider.value;
-      // $( "#concepto" ).children().last().attr('id', nombre );
       slider.oninput = function() {
         output.innerHTML = this.value;
         cost = ((Number(output.innerHTML)*value));
         console.log("total", total);
         newTotal = (Number(cost) + Number(total) + preTotal);
-        // newTotal = ( preTotal);
         if (output.innerHTML >= oldRange ) {
           ivaTotalArray = ((newTotal*.16) + newTotal);
           oldRange = output.innerHTML;
@@ -342,23 +333,23 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           $( "#concepto" ).append( '<li>' + texto + '</li>' );
           $( "#concepto" ).children().last().attr('id', nombre );
-          console.log("total", total);
-          console.log("preTotal: ", preTotal);
-          console.log("newTotal: ", newTotal);
-          console.log("cost", cost);
-          console.log(">>>>>>>>>>>>>>>>>");
+          // console.log("total", total);
+          // console.log("preTotal: ", preTotal);
+          // console.log("newTotal: ", newTotal);
+          // console.log("cost", cost);
+          // console.log(">>>>>>>>>>>>>>>>>");
         } else {
           ivaTotalArray = (((total + cost)*.16)+(total + cost));
           $( "#concepto" ).children().last().remove()
           $('#total').text(text.replace(text, (total + cost)));
           $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           oldRange = output.innerHTML;
-          console.log("total", total);
-          console.log("newTotal: ", newTotal);
-          console.log("cost", cost);
-          console.log("preTotal ", preTotal);
+          // console.log("total", total);
+          // console.log("newTotal: ", newTotal);
+          // console.log("cost", cost);
+          // console.log("preTotal ", preTotal);
           // console.log("testTotal", testTotal);
-          console.log("<<<<<<<<<<<<<<<<");
+          // console.log("<<<<<<<<<<<<<<<<");
           if (output.innerHTML == 0) {
             $('#closeModal').click();
           }
@@ -368,24 +359,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         preTotal += cost;
         console.log(preTotal);
       });
-
     });
-
-
-
-
-
-
-
-
-
 
     $('#closeModal').on('click', function(event) {
       test.removeClass('active');
-
     });
-
-
   </script>
 
 </div>
