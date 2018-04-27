@@ -195,6 +195,10 @@
   }
 
   .container-rightsub {
+    position:inherit;
+    // margin-left: 813px;
+    // margin-top: -380px;
+    // width: 410px !important;
     font-size: 40px;
     overflow: hidden;
     color: #5E5E5E !important;
@@ -261,6 +265,16 @@
     // width: 40%;
   }
 
+  .dropMenu {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .dropdown-menu {
+    padding: 0px !important;
+    border-radius: 15px;
+  }
+
   #cotizarModal {
     width: 100%;
     box-shadow: 8px 8px rgba(110,110,110,.75);
@@ -320,6 +334,21 @@
     border-radius: 20px;
   }
 
+  #demo {
+    font-size: 40px;
+  }
+
+  #range {
+    color: white !important;
+    background: rgba(152,87,226,.75) !important;
+    margin-top: 200px !important;
+    margin-left: 60px !important;
+    height: 300px !important;
+    width: 500px !important;
+    padding: 25px;
+    border-radius: 20px;
+  }
+
   .modal-header {
     // margin-top: 0px !important;
     h1, button {
@@ -329,6 +358,10 @@
       margin-top: -40px !important;
       margin-left: -10px !important;
     }
+  }
+
+  #acceptModal {
+    margin-bottom: 20px !important;
   }
 
   .field {
@@ -385,6 +418,45 @@
     margin-left: 270px;
     margin-top: 0px;
     float: right;
+  }
+
+
+  .slidecontainer {
+    width: 100%;
+  }
+
+  .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 10px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+  }
+
+  .slider:hover {
+      opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: rgb(91,197,182);
+      cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: rgb(91,197,182);
+      cursor: pointer;
   }
 
 
