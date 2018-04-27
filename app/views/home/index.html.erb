@@ -132,75 +132,32 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <br>
 
 
-
-
-
-
-
-
       <h3>Social Media Management</h3>
       <div class="design services btn-group">
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="analisis" value="250">
           <i class="fa fa-search" aria-hidden="true"></i>
           <p class="description">Análisis 1xhr </p>
         </button>
-        <!-- <button type="button" class="btn btn-outline-info service" value="5000" id="facebook">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <p class="description">Análisis</p>
-        </button> -->
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="investigacion" value="250">
           <i class="fa fa-flask" aria-hidden="true"></i>
           <p class="description">Investigación</p>
         </button>
-        <!-- <button type="button" class="btn btn-outline-info serviceNumeric" value="5000" id="instagram">
-          <i class="fa fa-flask" aria-hidden="true"></i>
-          <p class="description">Investigación</p>
-        </button> -->
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="optimizacion" value="250">
           <i class="fa fa-flask" aria-hidden="true"></i>
           <p class="description">Optimización</p>
         </button>
-        <!-- <button type="button" class="btn btn-outline-info serviceNumeric" value="5000" id="youtube">
-          <i class="fa fa-fighter-jet" aria-hidden="true"></i>
-          <p class="description">Optimización</p>
-        </button> -->
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="estrategia" value="250">
           <i class="fa fa-flask" aria-hidden="true"></i>
           <p class="description">Estratégia</p>
         </button>
-        <!-- <button type="button" class="btn btn-outline-info serviceNumeric" value="5000" id="facebook">
-          <i class="fa fa-clipboard" aria-hidden="true"></i>
-          <p class="description">Estratégia</p>
-        </button> -->
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="communityAssistance" value="250">
           <i class="fa fa-flask" aria-hidden="true"></i>
           <p class="description">Community <br>Assistance</p>
         </button>
-        <!-- <button type="button" class="btn btn-outline-info serviceNumeric" value="5000" id="instagram">
-          <i class="fa fa-users" aria-hidden="true"></i>
-          <p class="description">Community <br>Assistance</p>
-        </button> -->
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="communityManager" value="50">
           <i class="fa fa-flask" aria-hidden="true"></i>
           <p class="description">Community Manager <br>response</p>
         </button>
-        <!-- <button type="button" class="btn btn-outline-info serviceNumeric" value="5000" id="youtube">
-          <i class="fa fa-user-plus" aria-hidden="true"></i>
-          <p class="description">Community Manager <br>response</p>
-        </button> -->
-
-        <!-- <button type="button" class="btn btn-outline-info serviceNumeric" value="5000" id="facebook">
-          <i class="fa fa-facebook-square" aria-hidden="true"></i>
-          <p class="description">Facebook</p>
-        </button>
-        <button type="button" class="btn btn-outline-info serviceNumeric" value="5000" id="instagram">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-          <p class="description">Instagram</p>
-        </button>
-        <button type="button" class="btn btn-outline-info serviceNumeric" value="5000" id="youtube">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
-          <p class="description">Youtube</p>
-        </button> -->
       </div>
       <br>
 
@@ -333,23 +290,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           $( "#concepto" ).append( '<li>' + texto + '</li>' );
           $( "#concepto" ).children().last().attr('id', nombre );
-          // console.log("total", total);
-          // console.log("preTotal: ", preTotal);
-          // console.log("newTotal: ", newTotal);
-          // console.log("cost", cost);
-          // console.log(">>>>>>>>>>>>>>>>>");
         } else {
           ivaTotalArray = (((total + cost)*.16)+(total + cost));
           $( "#concepto" ).children().last().remove()
           $('#total').text(text.replace(text, (total + cost)));
           $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           oldRange = output.innerHTML;
-          // console.log("total", total);
-          // console.log("newTotal: ", newTotal);
-          // console.log("cost", cost);
-          // console.log("preTotal ", preTotal);
-          // console.log("testTotal", testTotal);
-          // console.log("<<<<<<<<<<<<<<<<");
           if (output.innerHTML == 0) {
             $('#closeModal').click();
           }
