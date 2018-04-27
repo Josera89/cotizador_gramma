@@ -226,7 +226,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           </div>
           <br>
           <!-- <button class="btn btn-outline-info" id="accept">Acceptar</button> -->
-          <button type="button" class="btn btn-outline-info" data-dismiss="modal" id="acceptModal">Acceptar</button>
+          <button type="button" class="btn btn-outline-info" data-dismiss="modal" id="acceptModal">Aceptar</button>
           <br>
           <button type="button" class="btn btn-outline-light" data-dismiss="modal" id="closeModal">Remover</button>
         </div>
@@ -249,9 +249,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           </div>
           <br>
           <!-- <button class="btn btn-outline-info" id="accept">Acceptar</button> -->
-          <button type="button" class="btn btn-outline-info" data-dismiss="modal" id="acceptModal">Acceptar</button>
+          <button type="button" class="btn btn-outline-info" data-dismiss="modal" id="acceptModalVisual">Aceptar</button>
           <br>
-          <button type="button" class="btn btn-outline-light" data-dismiss="modal" id="closeModal">Remover</button>
+          <button type="button" class="btn btn-outline-light" data-dismiss="modal" id="closeModalVisual">Remover</button>
         </div>
       </div>
     </div>
@@ -338,7 +338,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
     $('.serviceVisual').on('click', function() {
-      // console.log(preTotal);
+      console.log(preTotal);
       var newTotal = 0;
       var nombre = $(this).attr('id')
       var value = $(this).val();
@@ -347,6 +347,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       var output = document.getElementById("visualDemo");
       var texto = $(this).children('p').text();
       var cost = 0;
+      test = $(this);
       test = $(this);
       test.addClass('active');
       slider.value = 0;
@@ -364,10 +365,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           $( "#concepto" ).children().last().attr('id', nombre );
         } else {
           ivaTotalArray = (((total + cost)*.16)+(total + cost));
+          oldRange = output.innerHTML;
           $( "#concepto" ).children().last().remove()
           $('#total').text(text.replace(text, (total + cost)));
           $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
-          oldRange = output.innerHTML;
           if (output.innerHTML == 0) {
             $('#closeModal').click();
             $('#total').text(text.replace(text, (preTotal + total)));
@@ -376,7 +377,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           }
         }
       }
-      $('#acceptModal').on('click', function() {
+      $('#acceptModalVisual').on('click', function() {
+        console.log("chuy");
         preTotal += cost;
       });
     });
