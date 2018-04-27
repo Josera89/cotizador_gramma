@@ -149,19 +149,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           <p class="description">Investigación 1xhr </p>
         </button>
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="optimizacion" value="250">
-          <i class="fa fa-flask" aria-hidden="true"></i>
+          <i class="fa fa-fast-forward" aria-hidden="true"></i>
           <p class="description">Optimización 1xhr </p>
         </button>
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="estrategia" value="250">
-          <i class="fa fa-flask" aria-hidden="true"></i>
+          <i class="fa fa-clipboard" aria-hidden="true"></i>
           <p class="description">Estratégia 1xhr </p>
         </button>
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="communityAssistance" value="250">
-          <i class="fa fa-flask" aria-hidden="true"></i>
+          <i class="fa fa-users" aria-hidden="true"></i>
           <p class="description">Community <br>Assistance 1xhr </p>
         </button>
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="communityManager" value="50">
-          <i class="fa fa-flask" aria-hidden="true"></i>
+          <i class="fa fa-user-plus" aria-hidden="true"></i>
           <p class="description">Community Manager <br>response 1xhr </p>
         </button>
       </div>
@@ -370,7 +370,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           $('#total').text(text.replace(text, (total + cost)));
           $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           if (output.innerHTML == 0) {
-            $('#closeModal').click();
+            $('#closeModalVisual').click();
             $('#total').text(text.replace(text, (preTotal + total)));
             ivaTotalArray = (((preTotal + total)*.16)+(preTotal + total));
             $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
@@ -384,6 +384,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     });
 
     $('#closeModal').on('click', function(event) {
+      test.removeClass('active');
+    });
+    $('#closeModalVisual').on('click', function(event) {
       test.removeClass('active');
     });
   </script>
