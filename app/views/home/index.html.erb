@@ -132,6 +132,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <br>
 
 
+
+
+
+
+
+
       <h3>Social Media Management</h3>
       <div class="design services btn-group">
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="analisis" value="250">
@@ -140,34 +146,34 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         </button>
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="investigacion" value="250">
           <i class="fa fa-flask" aria-hidden="true"></i>
-          <p class="description">Investigación</p>
+          <p class="description">Investigación 1xhr </p>
         </button>
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="optimizacion" value="250">
           <i class="fa fa-flask" aria-hidden="true"></i>
-          <p class="description">Optimización</p>
+          <p class="description">Optimización 1xhr </p>
         </button>
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="estrategia" value="250">
           <i class="fa fa-flask" aria-hidden="true"></i>
-          <p class="description">Estratégia</p>
+          <p class="description">Estratégia 1xhr </p>
         </button>
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="communityAssistance" value="250">
           <i class="fa fa-flask" aria-hidden="true"></i>
-          <p class="description">Community <br>Assistance</p>
+          <p class="description">Community <br>Assistance 1xhr </p>
         </button>
         <button type="button" class="btn btn-outline-info btn-lg serviceNumeric" data-toggle="modal" data-target="#myModalNew" id="communityManager" value="50">
           <i class="fa fa-flask" aria-hidden="true"></i>
-          <p class="description">Community Manager <br>response</p>
+          <p class="description">Community Manager <br>response 1xhr </p>
         </button>
       </div>
       <br>
 
       <h3>Marketing & Publicidad</h3>
       <div class="design services btn-group">
-        <button type="button" class="btn btn-outline-info serviceNumeric" value="7000" id="materialFoto">
+        <button type="button" class="btn btn-outline-info serviceVisual" value="1000" id="materialFoto" data-toggle="modal" data-target="#myModalSecond">
           <i class="fa fa-image" aria-hidden="true"></i>
           <p class="description">Levantamiento <br>fotográfico</p>
         </button>
-        <button type="button" class="btn btn-outline-info serviceNumeric" value="6000" id="concept">
+        <button type="button" class="btn btn-outline-info serviceVisual" value="1000" id="concept" data-toggle="modal" data-target="#myModalSecond">
           <i class="fa fa-tv" aria-hidden="true"></i>
           <p class="description">Diseño de <br>Video</p>
         </button>
@@ -205,8 +211,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
   </div>
 
-
-
   <div id="myModalNew" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
       <!-- Modal content-->
@@ -218,6 +222,29 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           <h1>Número de horas: <span id="demo"></span></h1>
           <div class="slidecontainer">
             <input type="range" min="0" max="15" value="0" class="slider" id="myRange">
+            <!-- <p>hrs: <span id="demo"></span></p> -->
+          </div>
+          <br>
+          <!-- <button class="btn btn-outline-info" id="accept">Acceptar</button> -->
+          <button type="button" class="btn btn-outline-info" data-dismiss="modal" id="acceptModal">Acceptar</button>
+          <br>
+          <button type="button" class="btn btn-outline-light" data-dismiss="modal" id="closeModal">Remover</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="myModalSecond" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content" id="visualRange">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h1>Piezas : <span id="visualDemo"></span></h1>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="15" value="0" class="slider" id="myVisualRange">
             <!-- <p>hrs: <span id="demo"></span></p> -->
           </div>
           <br>
@@ -254,17 +281,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       } else {
         totalArray.push('-' + $(this).val());
         total = eval(totalArray.join("+"));
-        totalValue = total;
+        totalValue = (total + preTotal);
         $("#concepto").find('#' + nombre).remove();
-        ivaTotalArray = ((total*.16)+total);
+        ivaTotalArray = ((totalValue*.16)+totalValue);
       }
-      $('#total').text(text.replace(text, total));
+      $('#total').text(text.replace(text, totalValue));
       $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
     });
 
     var test = "";
     var preTotal = 0;
     $('.serviceNumeric').on('click', function() {
+      console.log(total);
       console.log(preTotal);
       var newTotal = 0;
       var nombre = $(this).attr('id')
@@ -281,7 +309,57 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       slider.oninput = function() {
         output.innerHTML = this.value;
         cost = ((Number(output.innerHTML)*value));
-        console.log("total", total);
+        // console.log("total", total);
+        newTotal = (Number(cost) + Number(total) + preTotal);
+        if (output.innerHTML >= oldRange ) {
+          ivaTotalArray = ((newTotal*.16) + newTotal);
+          oldRange = output.innerHTML;
+          $('#total').text(text.replace(text, newTotal));
+          $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
+          $( "#concepto" ).append( '<li>' + texto + '</li>' );
+          $( "#concepto" ).children().last().attr('id', nombre );
+        } else {
+          ivaTotalArray = (((total + cost)*.16)+(total + cost));
+          oldRange = output.innerHTML;
+          $( "#concepto" ).children().last().remove()
+          $('#total').text(text.replace(text, (total + cost)));
+          $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
+          if (output.innerHTML == 0) {
+            console.log("preTotal: ", preTotal);
+            console.log("total: ", total);
+            $('#closeModal').click();
+            $('#total').text(text.replace(text, (preTotal + total)));
+            console.log("preTotal: ", preTotal);
+            console.log("total: ", total);
+
+          }
+        }
+      }
+      $('#acceptModal').on('click', function() {
+        preTotal += cost;
+        // console.log(preTotal);
+      });
+    });
+
+
+    $('.serviceVisual').on('click', function() {
+      console.log(preTotal);
+      var newTotal = 0;
+      var nombre = $(this).attr('id')
+      var value = $(this).val();
+      var oldRange = 0;
+      var slider = document.getElementById("myVisualRange");
+      var output = document.getElementById("visualDemo");
+      var texto = $(this).children('p').text();
+      var cost = 0;
+      test = $(this);
+      test.addClass('active');
+      slider.value = 0;
+      output.innerHTML = slider.value;
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+        cost = ((Number(output.innerHTML)*value));
+        // console.log("total", total);
         newTotal = (Number(cost) + Number(total) + preTotal);
         if (output.innerHTML >= oldRange ) {
           ivaTotalArray = ((newTotal*.16) + newTotal);
@@ -297,13 +375,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           $("#iva").text(ivaText.replace(ivaText, ivaTotalArray));
           oldRange = output.innerHTML;
           if (output.innerHTML == 0) {
+            console.log("preTotal: ", preTotal);
+            console.log("total: ", total);
             $('#closeModal').click();
+            $('#total').text(text.replace(text, (preTotal + total)));
+            console.log("preTotal: ", preTotal);
+            console.log("total: ", total);
+
           }
         }
       }
       $('#acceptModal').on('click', function() {
         preTotal += cost;
-        console.log(preTotal);
+        // console.log(preTotal);
       });
     });
 
