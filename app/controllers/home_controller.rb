@@ -20,6 +20,6 @@ class HomeController < ApplicationController
 
   private
   def bills_params
-    params.require(:bill).permit(:content)
+    # params.require(:bill).permit(:content)
   end
 end

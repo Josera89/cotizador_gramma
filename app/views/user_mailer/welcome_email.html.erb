@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>GRAMMA CREATIVE STUDIO®</h1>
+
+    <!-- <%= image_tag "/logo_final.png" %> -->
+    <p>
+      <h2>Cotización:</h2>
+      Agente Gramma: <%= @user.first_name %> <%= @user.last_name %><br>
+      Email: <%= @user.email %> <br>
+      Cliente: <%= @bill.company %>
+      Email cliente: <%= @bill.email %>
+    </p>
+    <br>
+    <p>Alcance: <br>
+       <%= @bill.specifications %>.</p>
+    <h4><strong>Total: $<%= @bill.total %>.</strong></h4>
+    <h3><strong>Total con Iva: $<%= @bill.totalIva %>.</strong></h3>
+    <p>Gracias por usar nuestros servicios!</p>
+  </body>
+</html>

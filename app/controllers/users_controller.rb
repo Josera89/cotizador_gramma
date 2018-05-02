@@ -13,6 +13,11 @@ class UsersController < ApplicationController
     end
   end
 
+  # def email_bill
+  #   @user = User.find(session[:user_id])
+  #   UserMailer.with(user: @user).welcome_email.deliver_later
+  # end
+
   private
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password)

@@ -10,6 +10,8 @@ class BillsController < ApplicationController
   def create
     @bill = Bill.new(bills_params)
     if @bill.save
+      @user = User.find(session[:user_id])
+      UserMailer.with(user: @user, bill: @bill).welcome_email.deliver_later
       redirect_to '/bills'
     else
       render 'new'

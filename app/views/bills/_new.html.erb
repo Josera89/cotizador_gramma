@@ -31,9 +31,9 @@
       <div class="actions">
         <br>
         <%= f.submit "Crear Cotización", :class => 'btn btn-success', :id => 'cotizar' %>
+        <br>
       </div>
     <% end %>
-
   </div>
 
   <script>
@@ -56,7 +56,6 @@
            totalEsp += chomp + ", ";
         });
         $('#especificacionesForm').prop('value', totalEsp);
-
     });
 
   </script>

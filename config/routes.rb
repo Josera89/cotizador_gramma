@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/bills/new' => 'bills#new'
   resources :bills
 
+  post '/email', to: 'users#email_bill'
   get '/signup', to: 'users#new'
 
   get '/login', to: 'sessions#new'
